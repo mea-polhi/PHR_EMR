@@ -64,6 +64,13 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route('balance') }}" class="nav-link {{ request()->routeIs('balance') ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-peso-sign"></i>
+                        <p>Balance</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="#" class="nav-link">
                       <i class="nav-icon fa-solid fa-gear"></i>
                       <p>
@@ -91,7 +98,7 @@
                         </a>
                       </li>
                     </ul>
-                  </li>
+                </li>
 
             </ul>
         </nav>

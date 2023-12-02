@@ -20,7 +20,7 @@
         <div class="alert alert-info" role="alert">
             <i class="fa-solid fa-lightbulb fa-beat-fade mr-2" style="color: yellow;"></i>
             Use the form below to enter the patient's details
-          </div>
+        </div>
 
         <form method="post" action="{{ route('add-patient') }}">
             @csrf
@@ -40,7 +40,7 @@
                             <input type="text" name="last_name" id="last_name" placeholder="Patient's last name" class="form-control mb-1" required>
     
                             <label for="patient_phone_no">Phone No:</label>
-                            <input type="text" name="patient_phone_no" id="patient_phone_no" placeholder="Patient's phone number" class="form-control mb-1" required>
+                            <input type="number" name="patient_phone_no" id="patient_phone_no" placeholder="Patient's phone number" class="form-control mb-1" required>
     
                             <label for="gender">Gender:</label>
                             <select name="gender" id="gender" class="form-control mb-1" required>
@@ -68,21 +68,42 @@
                                 </div>
                                 <div class="col">
                                     <label for="guardian_phone_no">Guardian's Phone No:</label>
-                                    <input type="text" name="guardian_phone_no" id="guardian_phone_no" placeholder="Guarduan's phone number mb-1" class="form-control" required>
+                                    <input type="number" name="guardian_phone_no" id="guardian_phone_no" placeholder="Guarduan's phone number mb-1" class="form-control" required>
                                 </div>
                             </div>
 
                             <label for="relationship">Relationship:</label>
                             <input type="text" name="relationship" id="relationship" placeholder="Guardian's relationship with patient" class="form-control mb-1" required>
 
+                            <label for="payment">Payment Method:</label>
+                            <select name="payment" id="payment" class="form-control mb-1" required>
+                                <option value="cash">Cash</option>
+                            </select>
                         </div>
                     </div>
+                    @if (isset($message))
+                        <div class="alert alert-info" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation fa-beat mr-2" style="color: red;"></i>
+                            {{ $message }} 
+                        </div>
+                    @endif
+
                     <button type="submit" class="btn mt-3 mr-2 px-3 btn-success"><span class="bi bi-check-lg"></span>&nbsp;Submit</button>
-                    <button type="submit" class="btn mt-3 px-4 btn-danger"><span class="bi bi-backspace-fill"></span>&nbsp;Clear</button>
+                    <button type="submit" id="clearBtn" class="btn mt-3 px-4 btn-danger"><span class="bi bi-backspace-fill"></span>&nbsp;Clear</button>
+
                 </div>
-    
+                
             </div>
         </form>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#clearBtn").click(function(){
+                $("input[type='text']").val("");
+                $("select").val("");
+            });
+        });
+        </script>
 
 @endsection
