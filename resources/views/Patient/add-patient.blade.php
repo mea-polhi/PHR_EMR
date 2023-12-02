@@ -81,10 +81,10 @@
                             </select>
                         </div>
                     </div>
-                    @if (isset($message))
-                        <div class="alert alert-info" role="alert">
-                            <i class="fa-solid fa-triangle-exclamation fa-beat mr-2" style="color: red;"></i>
-                            {{ $message }} 
+                    @if (isset( $message ))
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation fa-beat mr-2" style="color: #ff8892;"></i>
+                            {{ $message }}  
                         </div>
                     @endif
 
