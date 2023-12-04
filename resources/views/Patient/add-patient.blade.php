@@ -44,9 +44,8 @@
     
                             <label for="gender">Gender:</label>
                             <select name="gender" id="gender" class="form-control mb-1" required>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Prefer not to say</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </select>
     
                             <label for="date_of_birth">Date of Birth:</label>

@@ -8,6 +8,7 @@
     <div>
       {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> --}}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -22,6 +23,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </div>
+    
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
         @include('layouts.navbar')
@@ -29,7 +31,7 @@
         @include('layouts.sidebar')
 
         <div class="content-wrapper">
-            <div class="content">
+            <div class="content" style="height: 650px; overflow: auto">
                 @yield('content')
             </div>
         </div>
@@ -43,8 +45,6 @@
 
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-
-
 
     <div>
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -61,6 +61,7 @@
         <script src="dist/js/Main.js"></script>
         <script src="dist/js/phr.js"></script>
         <script src="dist/js/pages/dashboard.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>

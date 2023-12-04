@@ -1,0 +1,113 @@
+.calendar {
+    display: flex;
+    flex-flow: column;
+}
+.calendar .header .month-year {
+    font-size: 20px;
+    font-weight: bold;
+    color: #636e73;
+    padding: 10px 0;
+}
+.calendar .days {
+    display: flex;
+    flex-flow: wrap;
+}
+.calendar .days .day_name {
+    width: calc(100% / 7);
+    border-right: 2px solid #F4F6F9;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #C2C7D0;
+    background-color: #343A40;
+}
+.calendar .days .day_name:nth-child(7) {
+    border: none;
+}
+.calendar .days .day_num {
+    display: flex;
+    flex-flow: column;
+    width: calc(100% / 7);
+    border-right: 1px solid #e6e9ea;
+    border-bottom: 1px solid #e6e9ea;
+    padding: 15px;
+    font-weight: bold;
+    color: #343A40;
+    cursor: pointer;
+    min-height: 100px;
+}
+.calendar .days .day_num span {
+    display: inline-flex;
+    width: 30px;
+    font-size: 14px;
+}
+
+.calendar .days .day_num:nth-child(7n+1) {
+    border-left: 1px solid #e6e9ea;
+}
+.calendar .days .day_num:hover {
+    background-color: #fdfdfd;
+}
+.calendar .days .day_num.ignore {
+    background-color: #fdfdfd;
+    color: #ced2d4;
+    cursor: inherit;
+}
+.calendar .days .day_num.selected {
+    background-color: #343A40;
+    color: white;
+    cursor: inherit;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Nova+Mono|Eczar';
+@import 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap';
+
+#body {
+  background-color: black;
+  color: white;
+}
+
+#div1 {
+  /*background-color: red;*/
+  transform: translateY(33%);
+}
+
+#time {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2vw;
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+
+#date {
+  /* font-family: 'Orbitron', sans-serif; */
+  font-size: 2vmin;
+  text-align: center;
+  text-shadow: 0px 0px 10px black;
+}
+
+/* @media only screen and (max-width: 500px){
+  #time {font-size: 2em;}
+  #date {font-size: 1em;}
+} */
+
+#calendarpanel {
+    border-radius: 25px;
+    background: #f6f6f6;
+    padding: 5px; 
+    width: 45rem;
+    height: 22rem;
+    margin: 2px 2px 20px 5px;
+  }
+
+  #clockpanel {
+    border-radius: 25px;
+    background: #b5b5b5;
+    padding: 10px; 
+    width: 100%;
+    height: 5rem;
+    margin: 50px 5px 10px 150px;
+    text-align: center;
+    border: 1px solid black;
+  }
