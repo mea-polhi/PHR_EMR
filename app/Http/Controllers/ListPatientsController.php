@@ -21,5 +21,6 @@ class ListPatientsController extends Controller
 
         return view('Patient.list-patient', ['patients' => $patients]);
     }
+
 }
 

@@ -59,7 +59,8 @@
                         <h5 class="card-header">Other Details</h5>
                         <div class="card-body">
                             <label for="address">Address:</label>
-                            <input type="text" name="address" id="address" placeholder="Patient's address" class="form-control mb-1" required>
+                            {{-- <input type="text" name="address" id="address" placeholder="Patient's address" class="form-control mb-1" required> --}}
+                            <textarea class="form-control mb-1" id="address" name="address" rows="2" placeholder="Patient's address" required></textarea>
 
                             <div class="row g-3">
                                 <div class="col">
@@ -68,7 +69,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="guardian_phone_no">Guardian's Phone No:</label>
-                                    <input type="number" name="guardian_phone_no" id="guardian_phone_no" placeholder="Guarduan's phone number mb-1" class="form-control" required>
+                                    <input type="number" name="guardian_phone_no" id="guardian_phone_no" placeholder="Guardian's phone number" class="form-control mb-1" required>
                                 </div>
                             </div>
 

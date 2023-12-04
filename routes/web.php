@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AddCodesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddPatientController;
 use App\Http\Controllers\LaboratoryController;
 use App\Http\Controllers\ConsultationController;
@@ -27,9 +28,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 Route::get('add-patient', [AddPatientController::class, 'index'])->name('add-patient');
 Route::post('add-patient', [AddPatientController::class, 'store'])->name('add-patient');
