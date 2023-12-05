@@ -16,7 +16,7 @@ class AddPatientController extends Controller
     {
         // Check if the form is submitted
         if ($request->isMethod('post')) {
-            // Validate form data (add more validation rules as needed)
+            // Validate form data
             $validatedData = $request->validate([
                 'first_name' => 'required',
                 'middle_initial' => 'nullable',
@@ -32,15 +32,10 @@ class AddPatientController extends Controller
             ]);
 
             Patient::create($validatedData);
-            // Add logic to store patient data in the database
-            // You can access validated form data using $validatedData
-            // For example:
-            // Patient::create($validatedData);
 
             return redirect()->route('list-patients')->with('success', 'Patient added successfully!');
         }
 
-        // If the form is not submitted, show the form
         return view('Patient.add-patient');
 
     }
