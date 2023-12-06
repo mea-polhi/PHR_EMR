@@ -9,6 +9,4 @@ class ConsultationController extends Controller
     {
         return view('consultation');
     }
-
-    
 }

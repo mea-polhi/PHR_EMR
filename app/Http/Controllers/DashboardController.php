@@ -9,7 +9,6 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {   
-        $patient = Patient::all();
         $totalPatients = Patient::count();
         $totalMen = Patient::where('gender', 'male')->count();
         $totalWomen = Patient::where('gender', 'female')->count();

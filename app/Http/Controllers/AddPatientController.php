@@ -14,9 +14,7 @@ class AddPatientController extends Controller
 
     public function store(Request $request)
     {
-        // Check if the form is submitted
         if ($request->isMethod('post')) {
-            // Validate form data
             $validatedData = $request->validate([
                 'first_name' => 'required',
                 'middle_initial' => 'nullable',

@@ -8,9 +8,19 @@ class ManageSystemUserController extends Controller
 {
     public function index()
     {
+        $this->middleware('auth');
         $users = User::all();
 
         return view('Settings.manage-systemUser', ['users' => $users]);
     }
 
+    public function create()
+    {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
 }

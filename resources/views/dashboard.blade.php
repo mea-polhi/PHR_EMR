@@ -171,31 +171,6 @@
 
   
   <script>
-    $(document).ready(function() {
-      // Get the current date and time
-      var currentDate = new Date();
-
-      // Display the calendar
-      $("#calendar").append(currentDate);
-
-      // Display the digital clock
-      setInterval(function() {
-        var currentTime = new Date();
-        var hours = currentTime.getHours();
-        var minutes = currentTime.getMinutes();
-        var seconds = currentTime.getSeconds();
-        var ampm = hours >= 12 ? 'PM' : 'AM';
-
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        $("#digitalClock").html(hours + ':' + minutes + ':' + seconds + ' ' + ampm);
-      }, 1000);
-
-    });
-
     window.setInterval(ut, 1000);
 
     function ut() {

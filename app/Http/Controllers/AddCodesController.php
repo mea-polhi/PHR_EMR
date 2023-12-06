@@ -9,6 +9,4 @@ class AddCodesController extends Controller
     {
         return view('Settings.icd-codes');
     }
-
-
 }

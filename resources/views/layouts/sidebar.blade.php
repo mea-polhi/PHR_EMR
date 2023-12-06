@@ -52,21 +52,21 @@
                 <li class="nav-item">
                     <a href="{{ route('consultation') }}" class="nav-link {{ request()->routeIs('consultation') ? 'active' : '' }}">
                         <i class="nav-icon fa-solid fa-stethoscope"></i>
-                        <p>Consultation</p>
+                        <p style="color: red">Consultation</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('laboratory') }}" class="nav-link {{ request()->routeIs('laboratory') ? 'active' : '' }}">
                         <i class="nav-icon fa-solid fa-flask"></i>
-                        <p>Laboratory</p>
+                        <p style="color: red">Laboratory</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('balance') }}" class="nav-link {{ request()->routeIs('balance') ? 'active' : '' }}">
                         <i class="nav-icon fa-solid fa-peso-sign"></i>
-                        <p>Balance</p>
+                        <p style="color: red">Balance</p>
                     </a>
                 </li>
 
@@ -82,7 +82,7 @@
                       <li class="nav-item">
                         <a href="{{ route('icd-codes') }}" class="nav-link {{ request()->routeIs('icd-codes') ? 'active' : '' }}">
                           <i class="nav-icon fa-solid fa-plus"></i>
-                          <p>Add ICD-10 Codes</p>
+                          <p style="color: red">Add ICD-10 Codesn</p>
                         </a>
                       </li>
                       <li class="nav-item">
@@ -92,9 +92,21 @@
                         </a>
                       </li>
                       <li class="nav-item">
+                        <a href="{{ route('permission.index') }}" class="nav-link">
+                          <i class="nav-icon fa-solid fa-shield-halved"></i>
+                          <p>Manage Permissions</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{ route('role.index') }}" class="nav-link">
+                          <i class="nav-icon fa-solid fa-shield-halved"></i>
+                          <p>Manage Roles</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
                         <a href="{{ route('user-activity') }}" class="nav-link {{ request()->routeIs('user-activity') ? 'active' : '' }}">
                           <i class="nav-icon fa-solid fa-book"></i>
-                          <p>User Log Activity</p>
+                          <p style="color: red">User Log Activity</p>
                         </a>
                       </li>
                     </ul>

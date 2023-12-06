@@ -21,4 +21,3 @@ class ListPatientsController extends Controller
     }
 
 }
-

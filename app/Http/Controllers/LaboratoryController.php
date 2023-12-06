@@ -9,6 +9,4 @@ class LaboratoryController extends Controller
     {
         return view('laboratory');
     }
-
-    
 }

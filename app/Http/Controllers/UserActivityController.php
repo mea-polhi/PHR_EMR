@@ -9,6 +9,4 @@ class UserActivityController extends Controller
     {
         return view('Settings.user-activity');
     }
-
-
 }

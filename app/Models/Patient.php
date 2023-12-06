@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model
 {
+    use HasFactory;
+    
     protected $fillable = [
         'first_name',
         'middle_initial',
@@ -20,7 +22,5 @@ class Patient extends Model
         'relationship',
         'payment',
     ];
-
-    use HasFactory;
 
 }

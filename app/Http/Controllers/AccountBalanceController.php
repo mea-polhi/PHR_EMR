@@ -9,6 +9,4 @@ class AccountBalanceController extends Controller
     {
         return view('balance');
     }
-
-
 }
