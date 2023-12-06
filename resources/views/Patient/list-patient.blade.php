@@ -49,10 +49,10 @@
                   </tr>
               </thead>
               <tbody>
-                  @foreach ($patients as $patient):
+                  @foreach ($patients as $patient)
                       <tr>
                           <td>{{ $patient->id }}</td>
-                          <td>{{ $patient->first_name . ' ' . $patient->middle_initial . ' ' . $patient->last_name; }}</td>
+                          <td>{{ $patient->first_name . ' ' . $patient->middle_initial . ' ' . $patient->last_name }}</td>
                           <td>{{ $patient->gender }}</td>
                           <td>{{ $patient->age }}</td>
                           <td><button class="btn btn-success"><span class="fa-solid fa-stethoscope"></span>&nbsp;</button></td>
