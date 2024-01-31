@@ -27,6 +27,7 @@
     
     <style>
         body {
+            background-color: #111827;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -42,7 +43,8 @@
 
         .content {
             text-align: center;
-            background-color: #fff;
+            background-color: #1F2937;
+            color: #E1D9D1;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,10 +60,10 @@
         <div class="content">
             <div class="login-box">
                 <div class="card card-outline card-primary">
-                  <div class="card-header text-center">
-                    <a href="{{ route('login') }}" class="h1"><b>Patient Health Record</b>System</a>
+                  <div class="card-header text-center" style="background-color: #111827">
+                    <a href="{{ route('login') }}" class="h1"><b>Patient Health Record</b> System</a>
                   </div>
-                  <div class="card-body">
+                  <div class="card-body" style="background-color: #111827">
                     <p class="login-box-msg">Sign in to start your session</p>
               
                     <form method="POST" action="{{ route('login') }}">

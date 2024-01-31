@@ -168,7 +168,6 @@
         </div>
       </div>
     </div>
-
   
   <script>
     window.setInterval(ut, 1000);
